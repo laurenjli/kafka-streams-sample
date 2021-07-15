@@ -1,0 +1,19 @@
+#reference: https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html
+spring:
+  application:
+    name: customer-balance-join-app1
+  kafka:
+    boostrap-servers: http://localhost:9092
+    properties:
+      schema.registry.url: http://localhost:8081
+    streams:
+      application-id: customer-balance-join-app1
+
+kafka:
+  topic:
+    input:
+      balance: Balance
+      customer: Customer
+    output:
+      customerBalance: CustomerBalance
+
